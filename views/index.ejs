@@ -7,9 +7,12 @@
     <nav>
       <%- include ('./components/nav') %>
     </nav>
-    <h1>Loja dos Peaky`s</h1>
+
+    <header>
+      <%- include ('./components/header') %>
+    </header>
     <main>
-      
+      <h1>Peakas Brabas</h1>
       <section class="items">
         
         <% loja.forEach((items) =>{ %>
@@ -26,6 +29,8 @@
         <%- include ('./components/footer') %>
       </footer>
 
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="/JS/scriptSlide.js"></script>
     <script src="/JS/script.js"></script>
 </body>
 </html>
