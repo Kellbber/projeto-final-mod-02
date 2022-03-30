@@ -64,9 +64,9 @@ nav {
     }
     .nav-container ul {
       position: absolute;
-      top: 50%;
+      top: 20%;
       transform: translateY(-50%);
-      width: 100%;
+      width: 80%;
     }
     .nav-container ul li {
       display: block;
@@ -102,7 +102,7 @@ nav {
     .nav-open {
       position: fixed;
       background-color: black;
-      right: 10px;
+      right: 20px;
       top: 10px;
       display: block;
       width: 48px;
@@ -303,7 +303,7 @@ footer p{
 .swiper {
     width: 100%;
     height: 100%;
-    min-width: 700px;
+    min-width: 250px;
   }
 
   .swiper-slide {
