@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+  <%- include ('./components/head') %>
+</head>
+<body>
+    <nav>
+      <%- include ('./components/nav') %>
+    </nav>
+    <section id="cadastro">
+        <img src="" alt="" />
+        <div>
+          <h2>Cadastre um novo item!</h2>
+          <form action="/create" method="POST">
+
+            <div class="cadastroNome">
+              <label for="nome">Nome:</label>
+              <input type="text" id="nome" name="nome" required />
+            </div>
+
+            <div class="lugarDescricao">
+              <label for="descricao">Descrição:</label>
+              <input type="text" id="descricao" name="descricao" required>
+            </div>
+
+            <div class="cadastroTamanho">
+              <label for="tamanho">Tamanho:</label>
+              <input type="text" id="tamanho" name="tamanho" required />
+            </div>
+
+            <div class="cadastroImagem">
+              <label for="imagem">Link da imagem:</label>
+              <input type="text" id="imagem" name="imagem" required />
+            </div>
+            <div class="botaoCadastro">
+              <button class="btnCadastrar" type="submit">Cadastrar</button>
+<footer>
+  <%- include ('./components/footer') %>
+</footer>
+</body>
+</html>
