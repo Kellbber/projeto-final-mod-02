@@ -26,8 +26,8 @@ nav {
   nav ul {
     float: left;
     margin-left: 4rem;
-    margin-top: 4rem;
-    margin-bottom: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
   nav ul li { 
     display: inline-block;
