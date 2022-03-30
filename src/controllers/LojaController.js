@@ -1,8 +1,8 @@
 const Items = require("../models/Items")
-
+const orderById= {order: [["id","ASC"]]}
 const getAll = async (req, res) => {
 	try{
-	const loja = await Items.findAll({order: [["id","ASC"]]});
+	const loja = await Items.findAll(orderById);
 	res.render("index", {loja})
 	}catch (err) {
 	res.status(500).send({err: err.message})
