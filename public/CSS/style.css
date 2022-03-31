@@ -1,9 +1,9 @@
-@import url("db.onlinewebfonts.com/c/2154ac0211eeef997462fecb05f0c38c?family=Veneer");
+@import url('https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap');
 
 *{
     margin: 0;
     padding: 0;
-    font-family: "Veneer", Arial, Helvetica, sans-serif;
+    font-family: "Pallete Mosaic", Arial, Helvetica, sans-serif;
 }
 
 body{
