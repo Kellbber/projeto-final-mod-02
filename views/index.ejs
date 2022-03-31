@@ -17,10 +17,10 @@
         
         <% loja.forEach((items) =>{ %>
         <div class="item">
-          <a class="item2" href="/detalhes/<%= loja.indexOf(items) %>">
+          <a class="item2" href="/detalhes/<%= items.id %>">
             <img src="<%= items.imagem %>" alt="item" />
             <h2><%= items.nome %></h2>
-            <h3 class="cardTipo"><%= items.tamanho %></h3>
+            
         </div>
         <% }) %>
       </section>

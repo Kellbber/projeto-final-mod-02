@@ -27,8 +27,19 @@ const create = async (req, res) => {
         res.status(500).send({err: err.message})
         }
 }
+    const detalhes = async (req, res) => {
+        const item = await Items.findByPk(req.params.id);
+        try{
+            res.render('detalhes',{ items: item});
+        }catch (err) {
+            res.status(500).send({err: err.message})
+            }
+    }
+
+
 module.exports = { 
     cadastro,
 	getAll,
     create,
+    detalhes,
 	}

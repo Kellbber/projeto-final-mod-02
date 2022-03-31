@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+  <head>
+    <%- include ('./components/head') %>
+  </head>
+  <nav>
+    <%- include ('./components/nav') %>
+  </nav>
+  <header>
+    <%- include ('./components/header') %>
+  </header>
+  <body>
+    <section class="items">
+      <div class="item2">
+        <img src="<%= items.imagem %>" alt="item" />
+      </div>
+      <div class="itemDetalhes">
+        <h2><%= items.nome %></h2>
+        <h2><%= items.tamanho %></h2>
+        <h2><%= items.descricao %></h2>
+        <a href="">Editar</a>
+        <a href="">Deletar</a>
+      </div>
+    </section>
+    <footer>
+        <%- include ('./components/footer') %>
+    </footer>
+  </body>
+</html>
