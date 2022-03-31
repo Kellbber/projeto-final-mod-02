@@ -401,3 +401,93 @@ footer p{
     height: 100%;
     object-fit: cover;
   }
+  .modal-overlay {
+    Background-color: #00000050;
+    Width: 100vw;
+    Height: 100vh;
+    Position: fixed;
+    Top: 0;
+    Left: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    }
+    
+    .modal{
+    Margin: 1rem;
+    Width: 100%;
+    max-width: 600px;
+    Height: auto;
+    Height: 300px;
+    Background-color: White;
+    Border-radius: 11px;
+    Display: flex;
+    Flex-direction: column;
+    Overflow: hidden;
+    }
+    
+    
+    
+    
+    .modal-header{
+    Display: flex;
+    Justify-content: space-between;
+    Background-color: black;
+    Padding: 1rem;
+    Color: White;
+    }
+    
+    
+    
+    .modal-header a#close-modal-put{
+    Font-size: 1.4rem;
+    Text-decoration: none;
+    }
+    .modal-body {
+    Padding: .5rem 1rem;
+    Flex: 1;
+    Display: flex;
+    align-content: center;
+    flex-wrap:wrap;
+    }
+    
+    .form-modal{
+    Display: flex;
+    Flex-wrap: wrap;
+    }
+    .form-modal input{
+    Width:100%;
+    Padding: .5rem;
+    Font-size: .8rem;
+    Outline: none;
+    Border: solid 2px gray;
+    }
+    
+    
+    
+    .form-modal label{
+    Color: gray;
+    Padding-top: .5rem;
+    }
+    .form-modal button {
+    Width: 30%
+    Display-flex;
+    Justify-content: center;
+    Margin: 1rem auto;
+    Font-size: 1rem;
+    Background-color: White;
+    Border: solid 2px black;
+    Color: black;
+    Border-radius: 3px;
+    Cursor: pointer;
+    Transition: all 0.3s ease-in-out;
+    }
+    .form-modal button:hover{
+    Background-color:black;
+    Color: White;
+    }
+    
+      
+    

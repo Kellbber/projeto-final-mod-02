@@ -10,6 +10,7 @@
     <%- include ('./components/header') %>
   </header>
   <body>
+
     <section class="detalhes">
     <section class="items">
       <div class="item2">
@@ -24,11 +25,14 @@
         <br>
         <h2 id="itemDescricao">Descrição: <%= items.descricao %></h2>
         <br>
-        <a id="editar" href="">Editar</a>
-        <a id="deletar" href="">Deletar</a>
+        <a id="editar" href="getById/<%= items.id%>/put">Editar</a>
+        <a id="deletar" href="getById/<%= items.id%>/delete">Deletar</a>
       </div>
     </section>
     </section>
+    <% if(itemPut != null) {%>
+      <%- include ('./components/modelPut') %>
+    <% } %>
     <footer>
         <%- include ('./components/footer') %>
     </footer>

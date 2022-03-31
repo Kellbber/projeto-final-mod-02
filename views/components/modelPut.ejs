@@ -1,0 +1,38 @@
+<section class="modal-overlay">
+
+    <div class="modal" id="modal">
+
+    </div>
+
+    <div class="modal-header">
+        <h3>Atualizar a camiseta</h3>
+        <a id="close-modal-put" href="/"></a>
+
+        <form class="form-modal" action="/update/<%= itemPut.id %> " method="POST">
+
+            <div class="cadastroNome">
+              <label for="nome">Nome:</label>
+              <input type="text" id="nome" name="nome"value=" <%= itemPut.nome %> " required />
+            </div>
+
+            <div class="lugarDescricao">
+              <label for="descricao">Descrição:</label>
+              <input type="text" id="descricao" name="descricao" value="<%= itemPut.descricao %> " required>
+            </div>
+
+            <div class="cadastroTamanho">
+              <label for="tamanho">Tamanho:</label>
+              <input type="text" id="tamanho" name="tamanho" value="<%= itemPut.tamanho %> " required />
+            </div>
+
+            <div class="cadastroImagem">
+              <label for="imagem">Link da imagem:</label>
+              <input type="text" id="imagem" name="imagem" value="<%= itemPut.imagem %> " required />
+            </div>
+            <div class="botaoCadastro">
+              <button class="btnCadastrar" type="submit">Atualizar</button>
+              
+      </div>
+      </form>
+    </div>
+</section>
