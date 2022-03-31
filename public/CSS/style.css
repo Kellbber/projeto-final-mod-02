@@ -1,6 +1,6 @@
 @font-face {
   font-family:'Veneer';
-  src: url('fonts/Veneer W03 Two It') format('opentype'), url('fonts/Veneer W03 Two It') format('truetype')
+  src: url('/fonts/Veneer\ W03\ Two\ It') format('opentype'), url('/fonts/Veneer\ W03\ Two\ It.ttf') format('truetype')
 
 }
 
