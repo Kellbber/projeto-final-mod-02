@@ -26,6 +26,7 @@ body{
 
 nav {
     background-color: black;
+  
     
   }
   nav ul {
@@ -188,7 +189,7 @@ main{
     gap: 1rem;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
 }
 
 .item{
@@ -197,12 +198,13 @@ main{
     width: 250px;
     height: 370px;
     flex-direction: column;
-    transition: 0.5s ease-in-out;
+    position: relative;
     margin: 30px;
     justify-content: center;
     align-items: center;
     display: flex;
     transition: 0.5s ease-in-out;
+   
 }
 
 .item2 img{
@@ -217,8 +219,10 @@ main{
     color: black;
 
 }
-.item:hover:hover{
+.item:hover{
     transform: scale(1.1);
+    border-bottom: 5px black solid;
+    border-radius: 5%;
 }
 
 .item h2,h3{
@@ -232,8 +236,6 @@ main{
 }
 #cadastro {
     display: flex;
-    /* background-color: rgba(61, 53, 53, 0.877);
-    border-radius: 10px; */
     width: 100%;
     flex-wrap: wrap;
     align-items: center;
@@ -274,9 +276,76 @@ main{
     background-color: #000000;
     color: white;
   }
-  form {
+.detalhes{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.detalhes img{
+  border: 2px black solid;
+  border-radius: 5%;
+  height: 250px;
+}
+.itemDetalhes{
+  width: 50%;
+  padding: 1rem;
+  background-color: whitesmoke;
+  border: 2px black solid;
+  border-radius: 3%;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+#itemDescricao{
+  margin-bottom: 2rem;
+}
+a#editar {
+  text-decoration: none;
+  color: rgb(251, 251, 251);
+  background-color: #000000;
+  font-size: 1rem;
+  font-weight: 600;
+  min-width: 20%;
+  text-align: center;
+  margin-top: 1rem;
+  padding: .2rem;
+  border: solid 3px #000000;
+  align-self: center;
+}
+a#editar:hover {
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 600;
+  border: solid 3px #000000;
+}
+a#deletar {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  background-color: #99211E;
+  font-size: 1rem;
+  font-weight: 600;
+  min-width: 20%;
+  text-align: center;
+  margin-top: .3rem;
+  margin-bottom: 1rem;
+  padding: .2rem;
+  border: solid 3px #99211E;
+  align-self: center;
+}
+a#deletar:hover {
+  background-color: rgb(253, 253, 253);
+  color: #99211E;
+  font-size: 1rem;
+  font-weight: 600;
+  border: solid 3px #99211E;
+}
+form {
     width: 50%;
-    /* flex-wrap: wrap; */
     align-items: center;
     flex-direction: column;
   }

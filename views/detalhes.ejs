@@ -10,17 +10,24 @@
     <%- include ('./components/header') %>
   </header>
   <body>
+    <section class="detalhes">
     <section class="items">
       <div class="item2">
         <img src="<%= items.imagem %>" alt="item" />
       </div>
       <div class="itemDetalhes">
-        <h2><%= items.nome %></h2>
-        <h2><%= items.tamanho %></h2>
-        <h2><%= items.descricao %></h2>
-        <a href="">Editar</a>
-        <a href="">Deletar</a>
+        <h2>Nome: <%= items.nome %></h2>
+        <br>
+        <br>
+        <h2>Tamanho: <%= items.tamanho %></h2>
+        <br>
+        <br>
+        <h2 id="itemDescricao">Descrição: <%= items.descricao %></h2>
+        <br>
+        <a id="editar" href="">Editar</a>
+        <a id="deletar" href="">Deletar</a>
       </div>
+    </section>
     </section>
     <footer>
         <%- include ('./components/footer') %>
