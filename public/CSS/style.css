@@ -1,9 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap');
+@font-face {
+  font-family:'Veneer', Arial, Helvetica, sans-serif;;
+  src: url('Veneer W03 Two It') format('opentype'), url('Veneer W03 Two It') format('truetype')
+
+}
 
 *{
     margin: 0;
     padding: 0;
-    font-family: "Pallete Mosaic", Arial, Helvetica, sans-serif;
+  font-family: 'Veneer',Arial, Helvetica, sans-serif;
+    
 }
 
 body{
