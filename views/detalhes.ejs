@@ -17,13 +17,19 @@
         <img src="<%= items.imagem %>" alt="item" />
       </div>
       <div class="itemDetalhes">
-        <h2>Nome: <%= items.nome %></h2>
+        <div class="nomeItem">
+        <h2>Nome:</h2> <h2 class="item1"><%= items.nome %></h2>
+      </div>
         <br>
         <br>
-        <h2>Tamanho: <%= items.tamanho %></h2>
+        <div class="nomeItem">
+        <h2>Tamanho:</h2> <h2 class="item1"><%= items.tamanho %></h2>
+      </div>
         <br>
         <br>
-        <h2 id="itemDescricao">Descrição: <%= items.descricao %></h2>
+        <div class="nomeItem">
+        <h2>Descrição:</h2> <h2 class="item1"><%= items.descricao %></h2>
+      </div>
         <br>
         <a id="editar" href="getById/<%= items.id%>/put">Editar</a>
         <a id="deletar" href="getById/<%= items.id%>/delete">Deletar</a>
@@ -36,5 +42,8 @@
     <footer>
         <%- include ('./components/footer') %>
     </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="/JS/scriptSlide.js"></script>
+    <script src="/JS/script.js"></script>
   </body>
 </html>
