@@ -1,38 +1,48 @@
 <!DOCTYPE html>
 <html lang="PT-BR">
-<head>
-  <%- include ('./components/head') %>
-</head>
-<body>
-    <nav>
-      <%- include ('./components/nav') %>
-    </nav>
-    <% if(mensagem != "") {  %>
-      <section id="message">
-          <p><%= mensagem %></p> <span id="close">&times;</span>
-      </section>
-  <% }  %> 
+  <head>
+    <%- include ('./components/head') %>
+  </head>
+  <body>
+    <nav><%- include ('./components/nav') %></nav>
+    <% if(mensagem != "") { %>
+    <section id="message">
+      <p><%= mensagem %></p>
+      <span id="close">&times;</span>
+    </section>
+    <% } %>
     <main>
-    <section id="cadastro">
-      <h2>Cadastre uma camiseta!</h2>
-        <img src="https://a-static.mlcdn.com.br/1500x1500/camiseta-branca-para-uniforme-modelo-basic-uniformes-corporativos/citerol/08030004999xg/4a76926bf51438bdefc277770c3a4a66.jpg" alt="camiseta para cadastro" />
-        
-          
-          <form action="/create" method="POST">
+      <section id="cadastro">
+        <h2>Cadastre uma camiseta!</h2>
+        <img
+          src="https://a-static.mlcdn.com.br/1500x1500/camiseta-branca-para-uniforme-modelo-basic-uniformes-corporativos/citerol/08030004999xg/4a76926bf51438bdefc277770c3a4a66.jpg"
+          alt="camiseta para cadastro"
+        />
 
-            <div class="cadastroNome">
-              <label for="nome">Nome:</label>
-              <input type="text" id="nome" name="nome"   placeholder="Digite o nome da camiseta..."/>
-            </div>
+        <form action="/create" method="POST">
+          <div class="cadastroNome">
+            <label for="nome">Nome:</label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Digite o nome da camiseta..."
+            />
+          </div>
 
-            <div class="lugarDescricao">
-              <label for="descricao">Descrição:</label>
-              <input type="text" id="descricao" name="descricao"   placeholder="Digite a descrição da camiseta...">
-            </div>
+          <div class="lugarDescricao">
+            <label for="descricao">Descrição:</label>
+            <input
+              type="text"
+              id="descricao"
+              name="descricao"
+              placeholder="Digite a descrição da camiseta..."
+            />
+          </div>
 
-            <div class="cadastroTamanho">
-              <label for="tamanho">Tamanho:</label>
-            <select id="tamanho" name="tamanho" >
+          <div class="cadastroTamanho">
+            <label for="tamanho">Tamanho:</label>
+            <select id="tamanho" name="tamanho">
               <option value="">SELECIONE</option>
               <option value="P">tamanho P</option>
               <option value="M">tamanho M</option>
@@ -40,21 +50,23 @@
               <option value="XG">tamanho XG</option>
               <option value="XXG">tamanho XXG</option>
             </select>
-           </div>
-            <div class="cadastroImagem">
-              <label for="imagem">Link da imagem:</label>
-              <input type="text" id="imagem" name="imagem"  placeholder="https://cdn.shopify.com/s/files/1/0046/0167/5810/products/TS-M-_-BLK-PEBL321__232_500x.jpg?v=1646390007"/>
-            </div>
-            <div class="botaoCadastro">
-              <button class="btnCadastrar" type="submit">Cadastrar</button>
-              
-      </div>
-      </form>
-            </section>
-          </main>
-<footer>
-  <%- include ('./components/footer') %>
-</footer>
-<script src="/JS/script.js"></script>
-</body>
+          </div>
+          <div class="cadastroImagem">
+            <label for="imagem">Link da imagem:</label>
+            <input
+              type="text"
+              id="imagem"
+              name="imagem"
+              placeholder="https://cdn.shopify.com/s/files/1/0046/0167/5810/products/TS-M-_-BLK-PEBL321__232_500x.jpg?v=1646390007"
+            />
+          </div>
+          <div class="botaoCadastro">
+            <button class="btnCadastrar" type="submit">Cadastrar</button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer><%- include ('./components/footer') %></footer>
+    <script src="/JS/script.js"></script>
+  </body>
 </html>
