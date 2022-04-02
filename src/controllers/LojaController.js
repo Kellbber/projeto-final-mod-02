@@ -84,10 +84,10 @@ const create = async (req, res) => {
      })
     
     }
-     }catch (err) {
-            res.status(500).send({err: err.message});
-    		         }
-    };
+  } catch (err) {
+    res.status(500).send({ err: err.message });
+  }
+};
 
     const update = async (req,res) => {
         try{
