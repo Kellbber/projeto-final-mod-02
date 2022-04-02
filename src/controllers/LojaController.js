@@ -1,5 +1,7 @@
+const { render } = require("express/lib/response");
 const Items = require("../models/Items")
 const orderById= {order: [["id","ASC"]]}
+let mensagem = "";
 const getAll = async (req, res) => {
 	try{
 	const loja = await Items.findAll(orderById);
@@ -10,15 +12,41 @@ const getAll = async (req, res) => {
 }
 const cadastro = (req, res) =>{
     try{ 
-
-        res.render("cadastro");
+        res.render("cadastro", {mensagem});
         }catch (err) {
         res.status(500).send({err: err.message})
         }
 }
+const timeout = () =>{
+    setTimeout(() => {
+        mensagem = "";
+      }, 3000);
+}
 const create = async (req, res) => {
     try{ 
+        
         const item = req.body;
+        if (!item.nome) {
+            res.render("cadastro", {
+              mensagem: "Nome é obrigatório",
+            });
+        }
+        if (!item.descricao) {
+            res.render("cadastro", {
+              mensagem: "Descrição é obrigatório",
+            });
+        }
+        if (!item.tamanho && item.tamanho.length()>3 && !isNaN(item.tamanho)) {
+            res.render("cadastro", {
+              mensagem: "Tamanho é obrigatório de P até XXG",
+            });
+        }
+        
+        if (!item.imagem) {
+            res.render("cadastro", {
+              mensagem: "Imagem é obrigatório",
+            });
+        }
         if(!item){
             return res.redirect('cadastro')
         }await Items.create(item)
@@ -49,7 +77,7 @@ const create = async (req, res) => {
      })
     }else {
     res.render('detalhes',{
-    loja,
+    items:item,
     itemPut: null,
     itemDel: item
     
@@ -70,6 +98,16 @@ const create = async (req, res) => {
             res.status(500).send({err: err.message});
     		         }
     }
+
+    const remove = async (req,res) => {
+        try{
+            await Items.destroy({where: {id: req.params.id}})
+            res.redirect("/")
+                 }catch (err) {
+            res.status(500).send({err: err.message});
+    		         }
+    }
+    
     
 
 module.exports = { 
@@ -79,4 +117,5 @@ module.exports = {
     detalhes,
     getById,
     update,
+    remove,
 	}

@@ -7,5 +7,6 @@ routes.post('/create', LojaController.create);
 routes.get('/detalhes/:id', LojaController.detalhes);
 routes.get('/detalhes/getById/:id/:method', LojaController.getById);
 routes.post('/update/:id', LojaController.update);
+routes.get('/remove/:id', LojaController.remove);
 
 module.exports = routes;

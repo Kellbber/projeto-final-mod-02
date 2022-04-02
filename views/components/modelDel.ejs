@@ -1,0 +1,14 @@
+<section class="modal-overlay">
+    <div class="modal-delete">
+        <h3>Excluindo a camiseta</h3>
+        <br>
+        <p>
+            Gostaria de excluir a camiseta <%= itemDel.nome %> ?
+        </p>
+        <br>
+        <div id="btns-del">
+            <a  id="yes" href="/remove/<%= itemDel.id %>">Sim</a>
+            <a id="no" href="/detalhes/<%= itemDel.id %>">Não</a>
+        </div> 
+    </div> 
+  </section>
