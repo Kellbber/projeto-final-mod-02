@@ -5,7 +5,7 @@ let mensagem = "";
 const getAll = async (req, res) => {
 	try{
 	const loja = await Items.findAll(orderById);
-	res.render("index", {loja, itemPut: null, itemDel: null})
+	res.render("index", {loja})
 	}catch (err) {
 	res.status(500).send({err: err.message})
 	}
@@ -24,32 +24,38 @@ const timeout = () =>{
 }
 const create = async (req, res) => {
     try{ 
-        
         const item = req.body;
         if (!item.nome) {
-            res.render("cadastro", {
-              mensagem: "Nome é obrigatório",
-            });
-        }
+          res.render("cadastro", {
+            mensagem: "Descrição é obrigatório",
+          });
+          timeout();;
+         }
         if (!item.descricao) {
             res.render("cadastro", {
               mensagem: "Descrição é obrigatório",
             });
+            timeout();
         }
-        if (!item.tamanho && item.tamanho.length()>3 && !isNaN(item.tamanho)) {
+        
+        if (!item.tamanho) {
+          
             res.render("cadastro", {
               mensagem: "Tamanho é obrigatório de P até XXG",
             });
+            timeout();
         }
         
         if (!item.imagem) {
-            res.render("cadastro", {
+            res.render("cadastro",{
               mensagem: "Imagem é obrigatório",
             });
+            timeout();
         }
         if(!item){
-            return res.redirect('cadastro')
-        }await Items.create(item)
+        return res.redirect('cadastro')
+      }
+        await Items.create(item)
         res.redirect('/');
         }catch (err) {
         res.status(500).send({err: err.message})
