@@ -25,40 +25,15 @@ const timeout = () =>{
 const create = async (req, res) => {
     try{ 
         const item = req.body;
-        if (!item.nome) {
-          res.render("cadastro", {
-            mensagem: "Descrição é obrigatório",
-          });
-          timeout();;
-         }
-        if (!item.descricao) {
-            res.render("cadastro", {
-              mensagem: "Descrição é obrigatório",
-            });
-            timeout();
-        }
-        
-        if (!item.tamanho) {
-          
-            res.render("cadastro", {
-              mensagem: "Tamanho é obrigatório de P até XXG",
-            });
-            timeout();
-        }
-        
-        if (!item.imagem) {
-            res.render("cadastro",{
-              mensagem: "Imagem é obrigatório",
-            });
-            timeout();
-        }
         if(!item){
         return res.redirect('cadastro')
       }
         await Items.create(item)
-        res.redirect('/');
+        
+        res.render('cadastro',{mensagem: "camiseta cadastrada com sucesso!"});
+        timeout();
         }catch (err) {
-        res.status(500).send({err: err.message})
+        console.log(err)
         }
 }
     const detalhes = async (req, res) => {

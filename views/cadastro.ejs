@@ -21,19 +21,19 @@
           <form action="/create" method="POST">
 
             <div class="cadastroNome">
-              <label for="nome">Nome:</label>
-              <input type="text" id="nome" name="nome"   placeholder="Digite o nome da camiseta..."/>
+              <label id="labelNome" for="nome">Nome:</label>
+              <input type="text" id="nome" name="nome"   placeholder="Digite o nome da camiseta..." required/>
             </div>
 
             <div class="lugarDescricao">
-              <label for="descricao">Descrição:</label>
-              <input type="text" id="descricao" name="descricao"   placeholder="Digite a descrição da camiseta...">
+              <label id="labelDescricao" for="descricao">Descrição:</label>
+              <input type="text" id="descricao" name="descricao"   placeholder="Digite a descrição da camiseta..." required>
             </div>
 
             <div class="cadastroTamanho">
-              <label for="tamanho">Tamanho:</label>
-            <select id="tamanho" name="tamanho" >
-              <option value="">SELECIONE</option>
+              <label id="labelTamanho" for="tamanho">Tamanho:</label>
+            <select id="tamanho" name="tamanho" required >
+              <option  value="">SELECIONE</option>
               <option value="P">tamanho P</option>
               <option value="M">tamanho M</option>
               <option value="G">tamanho G</option>
@@ -42,11 +42,14 @@
             </select>
            </div>
             <div class="cadastroImagem">
-              <label for="imagem">Link da imagem:</label>
-              <input type="text" id="imagem" name="imagem"  placeholder="https://cdn.shopify.com/s/files/1/0046/0167/5810/products/TS-M-_-BLK-PEBL321__232_500x.jpg?v=1646390007"/>
+              <label id="labelImagem" for="imagem">Link da imagem:</label>
+              <input type="text" id="imagem" name="imagem"  placeholder="https://cdn.shopify.com/s/files/1/0046/0167/5810/products/TS-M-_-BLK-PEBL321__232_500x.jpg?v=1646390007" required/>
             </div>
             <div class="botaoCadastro">
-              <button class="btnCadastrar" type="submit">Cadastrar</button>
+              <button  id="btnCadastro" class="buttonDisable" type="submit">Cadastrar</button>
+              <button class="btnVoltarCadastro">
+                <a href="/">Voltar</a>
+              </button>
               
       </div>
       </form>
@@ -56,5 +59,6 @@
   <%- include ('./components/footer') %>
 </footer>
 <script src="/JS/script.js"></script>
+<script src="/JS/scriptValidacao.js"></script>
 </body>
 </html>

@@ -255,9 +255,7 @@ main {
   display: flex;
   justify-content: center;
 }
-
-.btnCadastrar {
-  min-width: 20%;
+#btnCadastro{
   text-decoration: none;
   border: 2px solid #000000;
   background-color: rgb(255, 255, 255);
@@ -265,11 +263,59 @@ main {
   padding: 0.7rem;
   font-weight: 700;
   font-size: 1rem;
+  margin-right: 2rem;
+}
+#btnCadastro:hover{
+  border: 2px solid white;
+  background-color: #000000;
+  color: white;
+}
+.btnCadastrar {
+  
+  text-decoration: none;
+  border: 2px solid #000000;
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+  padding: 0.7rem;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-right: 2rem;
 }
 .btnCadastrar:hover {
   border: 2px solid white;
   background-color: #000000;
   color: white;
+}
+.btnVoltarCadastro a{
+  text-decoration: none;
+  color: black;
+}
+.buttonDisable{
+  border: 2px solid gray !important;
+  background-color: white !important;
+  color: gray !important;
+}
+.buttonDisable:hover{
+  border: 2px solid gray !important;
+  background-color: gray !important;
+  color: white !important;
+}
+.btnVoltarCadastro{
+ 
+  border: 2px solid #000000;
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+  padding: 0.7rem;
+  font-weight: 700;
+  font-size: 1rem;
+}
+.btnVoltarCadastro:hover{
+  border: 2px solid white;
+  background-color: #000000;
+  
+}
+.btnVoltarCadastro a:hover{
+color: white;
 }
 .detalhes {
   width: 100%;
