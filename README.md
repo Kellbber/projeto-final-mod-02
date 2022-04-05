@@ -1,4 +1,5 @@
 # projeto-final MODULO 02
+# Deploy HEROKU - > https://t-shirt-peakas.herokuapp.com
 O nosso projeto consiste em CRUD completo (criar, ler, editar e deletar) usando Node.JS, Express, EJS, Html e CSS. Respeitando o padrão MVC.
 #
 Optamos por criar um catálogo de camisetas temáticas da série Peaky Blinders. O usuário poderá mexer no catálogo do jeito que quiser, respeitando as validações de campo.
