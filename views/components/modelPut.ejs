@@ -6,48 +6,43 @@
     </div>
     <form class="form-modal" action="/update/<%= itemPut.id %> " method="POST">
     
-        <label for="nome">Nome:</label>
+        <label id="labelNomeAtualizar" for="nome">Nome:</label>
         <input
           type="text"
-          class="nome"
+          id="nomeAtualizar"
           name="nome"
-          value=" <%= itemPut.nome %> "
+          value=" <%= itemPut.nome.trim() %> "
           required
         />
 
-        <label for="descricao">Descrição:</label>
+        <label id="labelDescricaoAtualizar" for="descricao">Descrição:</label>
         <input
-          type="text"
-          class="descricao"
-          name="descricao"
-          value="<%= itemPut.descricao %> "
-          required
-        />
-    
-
-  
-        <label for="tamanho">Tamanho:</label>
-        <input
-          type="text"
-          class="tamanho"
-          name="tamanho"
-          value="<%= itemPut.tamanho %> "
-          required
-        />
+          type="text" id="descricaoAtualizar" name="descricao" value="<%= itemPut.descricao.trim() %> "required/>
+          <div class="cadastroTamanhoAtualizar">
+            <label id="labelTamanhoAtualizar" for="tamanho">Tamanho:</label>
+          <select id="tamanhoAtualizar" name="tamanho" required >
+            <option value="<%= itemPut.tamanho %>"><%= itemPut.tamanho %></option>
+            <option value="P">tamanho P</option>
+            <option value="M">tamanho M</option>
+            <option value="G">tamanho G</option>
+            <option value="XG">tamanho XG</option>
+            <option value="XXG">tamanho XXG</option>
+          </select>
+         </div>
  
 
 
-        <label for="imagem">Link da imagem:</label>
+        <label id="labelImagemAtualizar" for="imagem">Link da imagem:</label>
         <input
           type="text"
-          class="imagem"
+          id="imagemAtualizar"
           name="imagem"
-          value="<%= itemPut.imagem %> "
+          value="<%= itemPut.imagem.trim() %> "
           required
         />
     
       <div class="btnAtualizarImagem">
-        <button class="btnCadastrar" type="submit">Atualizar</button>
+        <button id="btnAtualizar" class="btnCadastrar" type="submit">Atualizar</button>
         <button class="btnVoltar">
           <a href="/detalhes/<%= itemPut.id %>">Voltar</a>
         </button>

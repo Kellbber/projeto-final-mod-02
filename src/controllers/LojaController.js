@@ -5,7 +5,7 @@ let mensagem = "";
 const getAll = async (req, res) => {
 	try{
 	const loja = await Items.findAll(orderById);
-	res.render("index", {loja})
+	res.render("index", {loja, mensagem:''})
 	}catch (err) {
 	res.status(500).send({err: err.message})
 	}
@@ -29,8 +29,8 @@ const create = async (req, res) => {
         return res.redirect('cadastro')
       }
         await Items.create(item)
-        
-        res.render('cadastro',{mensagem: "camiseta cadastrada com sucesso!"});
+        const loja = await Items.findAll();
+        res.render('cadastro',{ mensagem: "camiseta cadastrada com sucesso!"});
         timeout();
         }catch (err) {
         console.log(err)
@@ -51,13 +51,17 @@ const create = async (req, res) => {
             const item = await Items.findByPk(req.params.id)
     if(method == 'put'){
     res.render("detalhes",{
+    
     items: item,
     itemPut: item,
     itemDel: null
     
-     })
+     }
+     )
+     timeout();
     }else {
     res.render('detalhes',{
+   
     items:item,
     itemPut: null,
     itemDel: item
@@ -74,7 +78,7 @@ const create = async (req, res) => {
         try{
             const item = req.body;
             await Items.update(item, {where: {id: req.params.id}})
-            res.redirect("/")
+            res.redirect("/");
                  }catch (err) {
             res.status(500).send({err: err.message});
     		         }

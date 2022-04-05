@@ -1,24 +1,22 @@
-if ( window.history.replaceState ) {
-    window.history.replaceState( null, null, "/cadastro" );
-}
-const inputNome = document.querySelector("#nome");
-const labelNome = document.querySelector("#labelNome")
+const inputNome = document.querySelector("#nomeAtualizar");
+const labelNome = document.querySelector("#labelNomeAtualizar")
 
-const inputDescricao = document.querySelector("#descricao");
-const labelDescricao = document.querySelector("#labelDescricao")
+const inputDescricao = document.querySelector("#descricaoAtualizar");
+const labelDescricao = document.querySelector("#labelDescricaoAtualizar")
 
-const inputTamanho = document.querySelector("#tamanho");
-const labelTamanho = document.querySelector("#labelTamanho")
+const inputTamanho = document.querySelector("#tamanhoAtualizar");
+const labelTamanho = document.querySelector("#labelTamanhoAtualizar")
 
-const inputImagem = document.querySelector("#imagem");
-const labelImagem = document.querySelector("#labelImagem")
+const inputImagem = document.querySelector("#imagemAtualizar");
+const labelImagem = document.querySelector("#labelImagemAtualizar")
 
-const buttonCadastrar = document.querySelector("#btnCadastro")
+const buttonCadastrar = document.querySelector("#btnAtualizar")
 
-let campo1 = false;
-let campo2 = false;
-let campo3 = false;
-let campo4 = false;
+let campo1 = true;
+let campo2 = true;
+let campo3 = true;
+let campo4 = true;
+
 
 inputNome.addEventListener("blur",  ()=>{
     if(inputNome.value.length<3){
@@ -28,7 +26,7 @@ inputNome.addEventListener("blur",  ()=>{
         
     }else{
         labelNome.innerText = "Nome:"
-        labelNome.style.color = "black";
+        labelNome.style.color = "white";
         campo1 = true;
     }
     validarButton();
@@ -38,24 +36,26 @@ inputDescricao.addEventListener("blur",()=>{
     if(inputDescricao.value.length == 0){
         labelDescricao.innerText = "Descrição: (campo obrigatório)"
         labelDescricao.style.color = "red";
-        campo2= false;
+        campo2 = false;
+        
         
     }else{
         labelDescricao.innerText = "Descrição:"
-        labelDescricao.style.color = "black";
+        labelDescricao.style.color = "white";
         campo2 = true;
     }
     validarButton();
 });
 inputTamanho.addEventListener("click",  ()=>{
-    if(inputTamanho.value==''){
+    if(inputTamanho.value.length==''){
         labelTamanho.innerText = "Tamanho: (campo obrigatório)";
         labelTamanho.style.color = "red";
         campo3 = false;
         
+        
     }else{
         labelTamanho.innerText = "Tamanho:"
-        labelTamanho.style.color = "black";
+        labelTamanho.style.color = "white";
         campo3 = true;
     }
     validarButton();
@@ -67,7 +67,7 @@ inputImagem.addEventListener("blur",  ()=>{
         campo4 = false;
     }else{
         labelImagem.innerText = "Imagem:"
-        labelImagem.style.color = "black";
+        labelImagem.style.color = "white";
         campo4 = true;
     }
     validarButton();

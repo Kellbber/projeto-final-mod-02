@@ -7,11 +7,14 @@
     <nav>
       <%- include ('./components/nav') %>
     </nav>
+    <div class="mensagemTopo">
     <% if(mensagem != "") {  %>
+
       <section id="message">
           <p><%= mensagem %></p> <span id="close">&times;</span>
       </section>
   <% }  %> 
+  </div>
     <main>
     <section id="cadastro">
       <h2>Cadastre uma camiseta!</h2>

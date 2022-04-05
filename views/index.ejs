@@ -11,6 +11,14 @@
     <header>
       <%- include ('./components/header') %>
     </header>
+    <div class="mensagemTopo">
+      <% if(mensagem != "") {  %>
+  
+        <section id="message">
+            <p><%= mensagem %></p> <span id="close">&times;</span>
+        </section>
+    <% }  %> 
+    </div>
     <main>
       <h1>Peakas Brabas</h1>
       <section class="items">
