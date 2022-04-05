@@ -667,4 +667,60 @@ footer p {
       color: #ebebeb;
       transform: scale(1.5);
     }
-  
+
+    .tudo{
+      width: 100%;
+      display: flex;
+    }
+
+    .sobre{
+      width: fit-content;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .imgFundoSobre{
+      width: 50%;
+      
+    }
+
+    .imgFundoSobre img{
+      width: 100%;
+      margin-left: 1rem;
+
+    }
+    .sobreNos{
+      width: 200px;
+      height: 280px;
+      display: flex;
+      flex-direction: column;
+      background-color: #686868;
+      padding: 1rem;
+      border-radius: 20px;
+      flex-wrap: wrap;
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+  }
+
+    .sobreNos img {
+      width: 150px;
+      height: 150px;
+      margin-bottom: 1rem;
+      align-self: center;
+
+  }
+
+  .sobreNos p, h3, a{
+    text-decoration: none;
+    color:rgb(2, 2, 2);
+    margin-bottom: 1rem;
+  }
+
+  .sobreNos p{
+    color: white;
+  }
+

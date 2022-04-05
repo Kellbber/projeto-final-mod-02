@@ -91,6 +91,14 @@ const create = async (req, res) => {
                  }catch (err) {
             res.status(500).send({err: err.message});
     		         }
+                
+    }
+    const sobre =(req,res)=> {
+        try{
+            res.render('sobre')
+        }catch (err) {
+            res.status(500).send({err: err.message});
+    		         }
     }
     
     
@@ -103,4 +111,5 @@ module.exports = {
     getById,
     update,
     remove,
+    sobre
 	}
